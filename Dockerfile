@@ -1,3 +1,6 @@
 FROM python:3
-ADD . /
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["scrapy", "crawl", "youm7"]
+
 
