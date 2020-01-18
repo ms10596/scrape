@@ -6,10 +6,9 @@ import time
 
 class Youm7(scrapy.Spider):
     name = "youm7"
-    start_urls = ['http://www.youm7.com/'+str(i) for i in range(4589153, 4589153 - 1000, -1)]
+    start_urls = ['http://www.youm7.com/'+str(i) for i in range(4589153, 4589153 - 1, -1)]
 
     def parse(self, response):
-        time.sleep(10)
         new_item = ScrapeItem()
         new_item['title'] = self.get_title(response)
         new_item['url'] = response.request.url
