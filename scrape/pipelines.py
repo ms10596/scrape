@@ -8,8 +8,8 @@ from elasticsearch import Elasticsearch, RequestsHttpConnection
 import json
 from boto3 import Session
 from requests_aws4auth import AWS4Auth
-
-host = "search-scrapest-brek4lku7p2upyxntfay6hctqi.us-east-1.es.amazonaws.com:443"
+import os
+host = os.environ['elastic_url']
 
 
 class ScrapePipeline(object):

@@ -23,8 +23,9 @@ spec:
 #          limits:
 #            memory: "100Mi"
 #            cpu: "100m"
-#        env:
-#        - name: AWS_PROFILE
+        env:
+        - name: elastic_url
+          value: "search-scrapest-brek4lku7p2upyxntfay6hctqi.us-east-1.es.amazonaws.com:443"
 #          valueFrom:
 #            configMapKeyRef:
 #              name: env-config
