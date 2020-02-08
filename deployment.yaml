@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scrapest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     service: scrapest
+  template:
+    metadata:
+      labels:
+        service: scrapest
+    spec:
+      containers:
+      - image: 10596/scrapest
+        name: scrapest
+        imagePullPolicy: Always
+#        resources:
+#          requests:
+#            memory: "100Mi"
+#            cpu: "100m"
+#          limits:
+#            memory: "100Mi"
+#            cpu: "100m"
+#        env:
+#        - name: AWS_PROFILE
+#          valueFrom:
+#            configMapKeyRef:
+#              name: env-config
+#              key: AWS_PROFILE
+#        - name: AWS_REGION
+#          valueFrom:
+#            configMapKeyRef:
+#              name: env-config
+#              key: AWS_REGION
+#        volumeMounts:
+#        - name: aws-secret
+#          mountPath: "/root/.aws/"
+#          readOnly: true
+#      restartPolicy: Always
+#      volumes:
+#      - name: aws-secret
+#        secret:
+#          secretName: aws-secret

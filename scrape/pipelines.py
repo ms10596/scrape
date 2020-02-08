@@ -14,20 +14,20 @@ host = "search-scrapest-brek4lku7p2upyxntfay6hctqi.us-east-1.es.amazonaws.com:44
 
 class ScrapePipeline(object):
     def __init__(self):
-        credentials = Session().get_credentials()
-        aws_auth = AWS4Auth(
-            credentials.access_key,
-            credentials.secret_key,
-            "us-east-1",
-            "es",
-            session_token=credentials.token
-        )
+        # credentials = Session().get_credentials()
+        # aws_auth = AWS4Auth(
+        #     credentials.access_key,
+        #     credentials.secret_key,
+        #     "us-east-1",
+        #     "es",
+        #     session_token=credentials.token
+        # )
 
         self.client = Elasticsearch(
             hosts=[host],
             use_ssl=True,
             verify_certs=True,
-            http_auth=aws_auth,
+            # http_auth=aws_auth,
             connection_class=RequestsHttpConnection,
         )
         # self.client = Elasticsearch(

@@ -1,6 +1,8 @@
-FROM python:3c
-COPY . .
+FROM python:3.7
+COPY requirements.txt /
 RUN pip install -r requirements.txt
-CMD ["scrapy", "crawl", "youm7"]
+COPY . /
+EXPOSE 6800
+CMD ["scrapyd"]
 
 
