@@ -16,6 +16,13 @@ spec:
       - image: 10596/scrapest
         name: scrapest
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"
         env:
         - name: elastic_url
           valueFrom:
