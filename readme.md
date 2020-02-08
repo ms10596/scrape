@@ -5,3 +5,5 @@ scraping engine that is contenraized and deployed in a kubernetes cluster. It sc
 1. __scraper__: a python program built on the SCRAPY framework. It consists of several spiders that are invoked using a post request.
 2. __elasticsearch__: t3.micro instance of elastic search that presents in AWS cloud service.
 
+## Monitored via cloudwatch
+![image](images/cloudwatch.png)
