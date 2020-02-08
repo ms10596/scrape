@@ -1,5 +1,4 @@
 language: minimal
-
 before_install:
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   - chmod +x ./kubectl
@@ -7,4 +6,4 @@ before_install:
   - export KUBECONFIG="scrape-kubeconfig"
 
 install:
-  - kubectl apply -f .
+  - k apply -f k8s/
