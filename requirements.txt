@@ -10,7 +10,7 @@ certifi==2024.7.4
 cffi==1.13.1
 chardet==3.0.4
 constantly==15.1.0
-cryptography==46.0.5
+cryptography==46.0.7
 cssselect==1.1.0
 docutils==0.15.2
 elasticsearch==7.0.4
