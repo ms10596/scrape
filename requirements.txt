@@ -25,7 +25,7 @@ packaging==19.2
 parsel==1.5.2
 pluggy==0.13.0
 py==1.10.0
-pyasn1==0.4.7
+pyasn1==0.6.3
 pyasn1-modules==0.2.6
 pycparser==2.19
 PyDispatcher==2.0.5
