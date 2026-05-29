@@ -15,7 +15,7 @@ cssselect==1.1.0
 docutils==0.15.2
 elasticsearch==7.0.4
 hyperlink==19.0.0
-idna==2.8
+idna==3.15
 importlib-metadata==0.23
 incremental==17.5.0
 jmespath==0.9.4
